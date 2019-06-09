@@ -45,26 +45,26 @@ public class Fumador extends Thread {
                 obtenerSemaforoElemento();
 
                 if (agente.termino) {
-                    System.out.println("#####################################################");
-                    System.out.println("El agente se a retirado del salon. *tira el cigarro* ");
+                    System.out.println(nombre + " se retira de la sala porque el agente se fue.");
                     System.out.println("#####################################################");
                     return;
                 }
                 
                 if (agente.elementos_entregados.equals(elementos_que_le_faltan)) {
-                    System.out.println("#########################################################");
-                    System.out.println("Tengo" + elemento_que_posee + " y consegui "
+                    System.out.println("#####################################################");
+                    System.out.println(nombre + " tiene " + elemento_que_posee + " y consiguio "
                             + agente.elementos_entregados + ".");
                     System.out.println("* " + nombre + " coloca los papel, tabaco y fosforos en la mesa *");
                     Thread.sleep(1000);
-                    System.out.println("*rola un cigarrillo*");
-                    Thread.sleep(1000);
-                    System.out.println("*lo prende y comienza a fuma*");
-                    Thread.sleep(1000);
+                    System.out.println("* rola un cigarro *");
+                    Thread.sleep(300);
+                    System.out.println("* lo prende y comienza a fuma *");
+                    Thread.sleep(300);
                     System.out.println("*(_̅_(̅_̅_̅_̅_̅()ڪے*");
-                    Thread.sleep(1000);
-                    System.out.println("*tira el cigarro*");
-                    System.out.println("#########################################################");
+                    Thread.sleep(300);
+                    System.out.println("* tira el cigarro *");
+                    System.out.println("#####################################################");
+                    Thread.sleep(500);
                 }
                 
                 agente.semaforo_fumar.release();
